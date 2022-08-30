@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-scale '/home/julian/Pictures/Wallpapers/fire-watch-blue-4k.png' 
