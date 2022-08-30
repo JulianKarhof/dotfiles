@@ -41,6 +41,8 @@ o.cul = true
 -- exclude dashboard
 g.indentLine_fileTypeExclude = { 'dashboard' }
 
+o.termguicolors = true
+
 -- set gutter icons
 local signs = {
   Error = " ",

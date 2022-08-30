@@ -7,7 +7,7 @@ fi
 # confirmations, etc.) must go above this block; everything else may go below.
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/juliankarhof/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # GitHub
 export GH_TOKEN=17d2060a967748e10017ea4b442762a89450cf88
@@ -35,7 +35,7 @@ DISABLE_UPDATE_PROMPT="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fast-syntax-highlighting zsh-autosuggestions)
+plugins=(git F-Sy-H zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -58,7 +58,7 @@ alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # nvm related
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+# source $(brew --prefix nvm)/nvm.sh
 
 export PATH=/Users/juliankarhof/Development/flutter/bin:$PATH
 
@@ -102,10 +102,10 @@ bindkey -M menuselect 'l' vi-forward-char
 
 export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-
-chruby ruby
+# source /usr/local/share/chruby/chruby.sh
+# source /usr/local/share/chruby/auto.sh
+#
+# chruby ruby
 alias python=/usr/local/bin/python3
 alias pip=/usr/local/bin/pip3
 
@@ -118,3 +118,8 @@ alias air=~/go/bin/air
 alias date=gdate
 
 alias ly="yadm enter lazygit"
+alias mixer="pulsemixer"
+export PATH=$PATH:/home/julian/.spicetify
+
+# enable vi bindings
+bindkey -v

@@ -2,6 +2,7 @@ require('bufferline').setup {}
 require('gitsigns').setup {}
 require('Comment').setup {}
 require('neoscroll').setup {}
+require('colorizer').setup()
 
 require('fidget').setup {
   text = {

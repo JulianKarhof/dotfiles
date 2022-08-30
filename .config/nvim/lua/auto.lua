@@ -2,7 +2,9 @@
 local highlight_group = vim.api.nvim_create_augroup('Format', { clear = true })
 vim.api.nvim_create_autocmd('BufWritePre', {
   callback = function()
-    vim.lsp.buf.formatting_sync(nil, 200)
+    vim.cmd("mkview")
+    vim.lsp.buf.format()
+    vim.cmd("silent! loadview")
   end,
   group = highlight_group,
 })
@@ -16,10 +18,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
 })
 
-local group = vim.api.nvim_create_augroup("CleanDashboard", {})
+local dashboard_group = vim.api.nvim_create_augroup("CleanDashboard", {})
 
 vim.api.nvim_create_autocmd("User", {
-  group = group,
+  group = dashboard_group,
   pattern = "AlphaReady",
   callback = function()
     vim.opt.showtabline = 0
@@ -31,7 +33,7 @@ vim.api.nvim_create_autocmd("User", {
 })
 
 vim.api.nvim_create_autocmd("BufUnload", {
-  group = group,
+  group = dashboard_group,
   pattern = "<buffer>",
   callback = function()
     vim.opt.showtabline = 2
