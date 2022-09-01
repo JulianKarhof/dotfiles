@@ -9,9 +9,6 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# GitHub
-export GH_TOKEN=17d2060a967748e10017ea4b442762a89450cf88
-
 # Android
 export ANDROID_SDK_ROOT=/Users/juliankarhof/Library/Android/sdk
 export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:/$PATH
@@ -106,8 +103,8 @@ export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
 # source /usr/local/share/chruby/auto.sh
 #
 # chruby ruby
-alias python=/usr/local/bin/python3
-alias pip=/usr/local/bin/pip3
+alias python=/usr/bin/python3
+alias pip=/usr/bin/pip3
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
