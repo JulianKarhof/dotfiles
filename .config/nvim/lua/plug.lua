@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
   use 'ahmedkhalf/project.nvim'
   use { 'iamcco/markdown-preview.nvim', run = 'cd app && yarn install' }
   use { 'OmniSharp/omnisharp-vim' }
-  use({ 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' })
+  use { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' }
   use 'folke/lsp-colors.nvim'
   use 'tami5/lspsaga.nvim'
   use 'RRethy/vim-illuminate'
