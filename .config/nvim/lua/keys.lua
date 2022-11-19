@@ -1,7 +1,7 @@
 local wk = require("which-key")
 
 wk.register({
-  e = { ":Telescope file_browser path=%:p:h<cr>", "Explorer" },
+  e = { ":NvimTreeToggle<cr>", "Explorer" },
   c = { ":bd<cr>", "Close buffer" },
   n = { ":nohl<cr>", "Clear Highlights" },
   f = {

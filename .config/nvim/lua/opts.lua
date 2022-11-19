@@ -5,6 +5,8 @@ local cmd = vim.cmd
 
 g.mapleader = " "
 
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- set background color
 g.background = "dark"

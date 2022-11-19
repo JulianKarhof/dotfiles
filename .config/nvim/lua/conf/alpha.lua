@@ -49,6 +49,7 @@ local function colorize_header()
 end
 
 dashboard.section.buttons.val = {
+  dashboard.button("p", "  Open Project", ":Telescope projects<CR>", {}),
   dashboard.button("e", "  New file", ":ene | startinsert <CR>", {}),
   dashboard.button("f", "  Find file", ":Telescope find_files<CR>", {}),
   dashboard.button("g", "  Find word", ":Telescope live_grep<CR>", {}),

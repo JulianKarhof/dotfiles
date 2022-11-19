@@ -1,16 +1,22 @@
 -- format on save
-local highlight_group = vim.api.nvim_create_augroup('Format', { clear = true })
+local format_group = vim.api.nvim_create_augroup('Format', { clear = true })
 vim.api.nvim_create_autocmd('BufWritePre', {
   callback = function()
     vim.cmd("mkview")
     vim.lsp.buf.format()
     vim.cmd("silent! loadview")
   end,
-  group = highlight_group,
+  group = format_group,
+})
+
+local format_off_group = vim.api.nvim_create_augroup('TurnOffFormat', { clear = true })
+vim.api.nvim_create_autocmd('BufRead ~/Projects/sameday/**/*', {
+  command = 'autocmd! Format',
+  group = format_off_group,
 })
 
 -- highlight yank
-highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
     vim.highlight.on_yank()
@@ -42,4 +48,25 @@ vim.api.nvim_create_autocmd("BufUnload", {
     vim.opt.showcmd = true
     vim.opt.ruler = true
   end,
+})
+
+local modifiedBufs = function(bufs)
+  local t = 0
+  for k, v in pairs(bufs) do
+    if v.name:match("NvimTree_") == nil then
+      t = t + 1
+    end
+  end
+  return t
+end
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  nested = true,
+  callback = function()
+    if #vim.api.nvim_list_wins() == 1 and
+        vim.api.nvim_buf_get_name(0):match("NvimTree_") ~= nil and
+        modifiedBufs(vim.fn.getbufinfo({ bufmodified = 1 })) == 0 then
+      vim.cmd "quit"
+    end
+  end
 })

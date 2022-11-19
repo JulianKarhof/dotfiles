@@ -8,7 +8,6 @@ require("telescope").setup {
       "--with-filename",
       "--line-number",
       "--column",
-      "--smart-case",
     },
     prompt_prefix = "   ",
     selection_caret = "  ",
@@ -61,4 +60,5 @@ require("telescope").setup {
 }
 
 require("telescope").load_extension "file_browser"
+require('telescope').load_extension('projects')
 require('telescope').load_extension 'fzf'

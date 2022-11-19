@@ -90,6 +90,11 @@ super + {o,i}
 super + {_,shift + }{1-9}
 	bspc {desktop -f,node -d} '^{1-9}' --follow
 
+super + {_,shift + }{KP_End, KP_Down, KP_Next, KP_Left, KP_Begin, KP_Right, KP_Home, KP_Up, KP_Prior}
+	bspc {desktop -f,node -d} '^{1-9}' --follow
+
+
+
 #
 # preselect
 #
@@ -125,3 +130,23 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# media keys
+#
+
+# volume
+XF86AudioLowerVolume
+  amixer set Master 5%-
+XF86AudioRaiseVolume
+  amixer set Master 5%+
+XF86AudioMute
+  amixer set Master toggle
+
+# controls
+XF86AudioPrev
+  playerctl previous
+XF86AudioPlay
+  playerctl play-pause
+XF86AudioNext
+  playerctl next

@@ -2,6 +2,7 @@ require('bufferline').setup {}
 require('gitsigns').setup {}
 require('Comment').setup {}
 require('neoscroll').setup {}
+require('project_nvim').setup {}
 require('colorizer').setup()
 
 require('fidget').setup {
@@ -23,7 +24,10 @@ require('lualine').setup {
   },
 }
 
+require "conf.nvim-tree"
+require "conf.null-ls"
 require "conf.toggleterm"
 require "conf.alpha"
 require "conf.cmp"
 require "conf.telescope"
+require "conf.auto-session"

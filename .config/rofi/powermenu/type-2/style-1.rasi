@@ -39,7 +39,7 @@ window {
     border-radius:               0px;
     border-color:                @selected;
     cursor:                      "default";
-    background-color:            @background;
+    background-color:            @background-transparent;
 }
 
 /*****----- Main Box -----*****/
@@ -86,8 +86,8 @@ prompt {
     enabled:                     true;
     padding:                     12px;
     border-radius:               0px;
-    background-color:            @active;
-    text-color:                  @background;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
 }
 
 /*****----- Message -----*****/
@@ -157,7 +157,7 @@ element {
     cursor:                      pointer;
 }
 element-text {
-    font:                        "feather bold 32";
+    font:                        "feather bold 20";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
