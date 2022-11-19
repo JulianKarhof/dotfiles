@@ -36,6 +36,15 @@ o.timeoutlen = 300
 -- enable persistent undos
 o.undofile = true
 o.undolevels = 1000
+o.autoread = true
+o.backup = false
+o.writebackup = false
+o.scrolloff = 8
+o.ignorecase = true
+o.smartcase = true
+
+o.completeopt = 'menuone,preview,noinsert'
+o.hidden = true
 
 -- cursor line
 o.cul = true

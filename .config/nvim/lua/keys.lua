@@ -33,6 +33,12 @@ wk.register({
     f = { "<cmd>lua vim.diagnostic.open_float()<cr>", "Float" },
     q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Loclist" },
   },
+  g = {
+    name = "Goto",
+    h = "<cmd>Lspsaga lsp_finder<CR>",
+    a = "<cmd>Lspsaga code_action<CR>",
+    d = "<cmd>Lspsaga peek_definition<CR>",
+  }
 })
 
 wk.register({
