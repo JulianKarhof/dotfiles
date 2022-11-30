@@ -8,6 +8,12 @@ fi
 # oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 
+if [ -f ~/.secrets ]; then
+    source ~/.secrets
+else
+    print "404: ~/.secrets not found."
+fi
+
 # android tooling
 export ANDROID_SDK_ROOT=/Users/juliankarhof/Library/Android/sdk
 export PATH=$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:/$PATH
@@ -103,4 +109,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # lazygit yadm
-alias yadm="lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git"
+alias yadml="lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git"
