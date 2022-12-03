@@ -9,11 +9,11 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   group = format_group,
 })
 
-local format_off_group = vim.api.nvim_create_augroup('TurnOffFormat', { clear = true })
-vim.api.nvim_create_autocmd('BufRead ~/Projects/sameday/**/*', {
-  command = 'autocmd! Format',
-  group = format_off_group,
-})
+-- local format_off_group = vim.api.nvim_create_augroup('TurnOffFormat', { clear = true })
+-- vim.api.nvim_create_autocmd('BufRead ~/Projects/sameday/**/*', {
+--   command = 'autocmd! Format',
+--   group = format_off_group,
+-- })
 
 -- highlight yank
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
