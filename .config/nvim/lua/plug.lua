@@ -51,6 +51,7 @@ return require('packer').startup(function(use)
   use 'folke/lsp-colors.nvim'
   use 'tami5/lspsaga.nvim'
   use 'RRethy/vim-illuminate'
+  use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
 
   if packer_bootstrap then
     require('packer').sync()

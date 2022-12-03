@@ -4,6 +4,7 @@ require('Comment').setup {}
 require('neoscroll').setup {}
 require('project_nvim').setup {}
 require('colorizer').setup()
+require("flutter-tools").setup {}
 
 require('fidget').setup {
   text = {
