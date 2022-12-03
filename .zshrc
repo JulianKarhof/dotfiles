@@ -110,7 +110,7 @@ source /usr/share/nvm/bash_completion
 source /usr/share/nvm/install-nvm-exec
 
 # lazygit yadm
-alias yadm="lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git"
+alias lyadm="lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git"
 
 # pnpm
 alias pn=pnpm
