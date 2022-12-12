@@ -93,7 +93,9 @@ super + {_,shift + }{1-9}
 super + {_,shift + }{KP_End, KP_Down, KP_Next, KP_Left, KP_Begin, KP_Right, KP_Home, KP_Up, KP_Prior}
 	bspc {desktop -f,node -d} '^{1-9}' --follow
 
-
+super + alt + p
+  {bspc node -i,\
+  for i in $(bspc query -N -n '.leaf.!window'); do bspc node $i -k; done}
 
 #
 # preselect
