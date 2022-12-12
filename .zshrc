@@ -117,3 +117,5 @@ alias pn=pnpm
 
 # android
 export ANDROID_SDK_ROOT=/home/julian/Android/Sdk
+export ANDROID_HOME=/home/julian/Android/Sdk
+alias emu="emulator @Pixel_6_Pro_API_33"
