@@ -21,7 +21,7 @@ wk.register({
   },
   g = {
     name = "Git",
-    g = { "<cmd>lua Lazygit_toggle()<CR>", "LazyGit" },
+    g = { "<cmd>lua Lazygit_toggle()<cr>", "LazyGit" },
   },
 }, { prefix = "<leader>" })
 
@@ -35,23 +35,24 @@ wk.register({
   },
   g = {
     name = "Goto",
-    h = "<cmd>Lspsaga lsp_finder<CR>",
-    a = "<cmd>Lspsaga code_action<CR>",
-    d = "<cmd>Lspsaga peek_definition<CR>",
-  }
+    h = "<cmd>Lspsaga lsp_finder<cr>",
+    a = "<cmd>Lspsaga code_action<cr>",
+    d = "<cmd>Lspsaga peek_definition<cr>",
+  },
 })
 
 wk.register({
   ['<S-l>'] = { ":BufferLineCycleNext<cr>", "Next tab" },
   ['<S-h>'] = { ":BufferLineCyclePrev<cr>", "Prev tab" },
+  ['<S-k>'] = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
   ['<C-k>'] = { ":wincmd k<cr>", "Jump to north pane" },
   ['<C-j>'] = { ":wincmd j<cr>", "Jump to south pane" },
   ['<C-h>'] = { ":wincmd h<cr>", "Jump to west pane" },
   ['<C-l>'] = { ":wincmd l<cr>", "Jump to east pane" },
-  ['<C-g>'] = { "<cmd>lua Lazygit_toggle()<CR>", "LazyGit" }
+  ['<C-g>'] = { "<cmd>lua Lazygit_toggle()<cr>", "LazyGit" }
 })
 
 
 wk.register({
-  ['<C-g>'] = { "<cmd>lua Lazygit_toggle()<CR>", "LazyGit" }
+  ['<C-g>'] = { "<cmd>lua Lazygit_toggle()<cr>", "LazyGit" }
 }, { mode = "t" })

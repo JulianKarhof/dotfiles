@@ -3,10 +3,11 @@ local function close_buffers()
   for _, value in ipairs(windows) do
     local has_var, _ = pcall(vim.api.nvim_win_get_var, value, 'alpha')
     local has_var2, _ = pcall(vim.api.nvim_win_get_var, value, 'fidget')
+    local has_var3, _ = pcall(vim.api.nvim_win_get_var, value, '__FLUTTER_DEV_LOG__')
 
     local config = vim.api.nvim_win_get_config(value)
 
-    if has_var or has_var2 or config.relative ~= "" then
+    if has_var or has_var2 or has_var3 or config.relative ~= "" then
       vim.api.nvim_win_close(value, true)
     end
   end
