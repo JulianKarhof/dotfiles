@@ -183,3 +183,4 @@ kb-remove-to-eol: "";
 	me-accept-custom: "Control+MouseDPrimary";
 */
 }
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
