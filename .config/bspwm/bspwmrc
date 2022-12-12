@@ -6,7 +6,7 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 # set wallpaper
 ~/.fehbg &
 # start compositor (new backend improves performance)
-picom --experimental-backends &
+picom &
 # swap esc and caps lock
 setxkbmap -option caps:swapescape
 # set compose key
