@@ -90,9 +90,11 @@ super + {o,i}
 super + {_,shift + }{1-9}
 	bspc {desktop -f,node -d} '^{1-9}' --follow
 
+# make keypad work
 super + {_,shift + }{KP_End, KP_Down, KP_Next, KP_Left, KP_Begin, KP_Right, KP_Home, KP_Up, KP_Prior}
 	bspc {desktop -f,node -d} '^{1-9}' --follow
 
+# insert leaf
 super + alt + p
   {bspc node -i,\
   for i in $(bspc query -N -n '.leaf.!window'); do bspc node $i -k; done}
