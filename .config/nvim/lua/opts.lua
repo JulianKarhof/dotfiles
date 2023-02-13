@@ -76,6 +76,9 @@ vim.diagnostic.config {
   update_in_insert = false,
 }
 
+-- session
+o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
 -- Reload all user config lua modules
 local function reload()
   for name, _ in pairs(package.loaded) do
