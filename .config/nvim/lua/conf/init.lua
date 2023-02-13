@@ -4,6 +4,7 @@ require('Comment').setup {}
 require('neoscroll').setup {}
 require('project_nvim').setup {}
 require('colorizer').setup()
+require("color-picker")
 
 require("flutter-tools").setup {
   debugger = {

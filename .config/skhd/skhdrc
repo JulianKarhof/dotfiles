@@ -1,5 +1,6 @@
 # open terminal
-cmd - return : /usr/local/bin/alacritty
+cmd - return : /usr/local/bin/kitty
+
 # focus displays
 shift + cmd - h : yabai -m display --focus prev
 shift + cmd - l : yabai -m display --focus next
@@ -12,8 +13,8 @@ shift + cmd - j : index="$(yabai -m query --spaces --display | jq 'map(."has-foc
                   absolute=$(yabai -m query --displays --display | jq -r --arg index "$index" '.spaces[$index|tonumber]') && \
                   yabai -m space --focus "${absolute}" || yabai -m space --focus $(yabai -m query --displays --display | jq -r '.spaces[-1]')
 
-shift + cmd - k : yabai -m space --focus next
-shift + cmd - j : yabai -m space --focus prev
+# shift + cmd - k : yabai -m space --focus next
+# shift + cmd - j : yabai -m space --focus prev
 
 shift + cmd - 1 : yabai -m space --focus 1
 shift + cmd - 2 : yabai -m space --focus 2
@@ -32,7 +33,8 @@ shift + cmd - 0x56 : yabai -m space --focus 4
 shift + cmd - 0x57 : yabai -m space --focus 5
 shift + cmd - 0x58 : yabai -m space --focus 6
 shift + cmd - 0x59 : yabai -m space --focus 7
-shift + cmd - 0x60 : yabai -m space --focus 8 shift + cmd - 0x61 : yabai -m space --focus 9
+shift + cmd - 0x60 : yabai -m space --focus 8
+shift + cmd - 0x61 : yabai -m space --focus 9
 
 # destroy desktop
 shift + cmd - w : yabai -m space --destroy

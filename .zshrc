@@ -91,10 +91,13 @@ export PATH=$PATH:~/.spicetify
 
 # java
 export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home)
 
 # python
-alias python=/usr/bin/python3
+# alias python=/usr/bin/python3
 alias pip=/usr/bin/pip3
+
+PATH=$(pyenv root)/shims:$PATH
 
 # path
 export PATH=/usr/local/bin:$PATH
@@ -103,17 +106,14 @@ export PATH=/usr/local/bin:$PATH
 export PATH=~/.local/bin:$PATH
 export PATH=$PATH:/home/julian/.spicetify
 
-# nvm
-[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
-source /usr/share/nvm/nvm.sh
-source /usr/share/nvm/bash_completion
-source /usr/share/nvm/install-nvm-exec
-
 # lazygit yadm
 alias lyadm="lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git"
 
 # pnpm
 alias pn=pnpm
+
+# neovide
+export NEOVIDE_MULTIGRID=true
 
 # android
 export ANDROID_SDK_ROOT=/home/julian/Android/Sdk
@@ -122,3 +122,7 @@ alias emu="emulator @Pixel_6_Pro_API_33"
 
 #flutter
 export PATH="$PATH":"$HOME/.pub-cache/bin"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PNPM_HOME="/Users/juliankarhof/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"

@@ -32,7 +32,7 @@ end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local servers = { 'clangd', 'rust_analyzer', 'pyright' }
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver', 'svelte', 'tailwindcss' }
 
 require('nvim-lsp-installer').setup {
   ensure_installed = servers,
