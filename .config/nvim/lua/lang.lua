@@ -32,7 +32,7 @@ end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver' }
+local servers = { 'clangd', 'rust_analyzer', 'pyright' }
 
 require('nvim-lsp-installer').setup {
   ensure_installed = servers,
@@ -46,6 +46,8 @@ for _, lsp in ipairs(servers) do
 end
 
 require('lspconfig').omnisharp.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
   use_mono = true
 }
 
@@ -53,7 +55,12 @@ local runtime_path = vim.split(package.path, ';')
 table.insert(runtime_path, 'lua/?.lua')
 table.insert(runtime_path, 'lua/?/init.lua')
 
-require('lspconfig').sumneko_lua.setup {
+require('lspconfig').tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+require('lspconfig').lua_ls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
