@@ -11,6 +11,8 @@ picom &
 setxkbmap -option caps:swapescape
 # set compose key
 setxkbmap -option compose:ralt
+# set key repeat rate
+xset r rate 300 40
 
 # temp: kill processes about to be relaunched
 killall -9 polybar xborders dunst
