@@ -2,7 +2,7 @@ local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
-    install_path })
+          install_path })
   vim.cmd [[packadd packer.nvim]]
 end
 
@@ -29,7 +29,7 @@ return require('packer').startup(function(use)
   }
   use 'lewis6991/gitsigns.nvim'
   use 'numToStr/Comment.nvim'
-  use 'rmagatti/auto-session'
+  use 'TC72/auto-session'
   use 'karb94/neoscroll.nvim'
   use { 'goolord/alpha-nvim', requires = { 'nvim-tree/nvim-web-devicons' } }
   use { 'hrsh7th/nvim-cmp', requires = { 'saadparwaiz1/cmp_luasnip', 'hrsh7th/cmp-nvim-lsp' } }
@@ -56,7 +56,7 @@ return require('packer').startup(function(use)
   use { 'evanleck/vim-svelte' }
   use { "ziontee113/color-picker.nvim" }
 
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end)
+      if packer_bootstrap then
+        require('packer').sync()
+      end
+    end)

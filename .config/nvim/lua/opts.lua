@@ -56,10 +56,10 @@ o.termguicolors = true
 
 -- set gutter icons
 local signs = {
-  Error = " ",
-  Warn = " ",
-  Hint = " ",
-  Info = " "
+    Error = " ",
+    Warn = " ",
+    Hint = " ",
+    Info = " "
 }
 
 for name, icon in pairs(signs) do
@@ -68,16 +68,16 @@ for name, icon in pairs(signs) do
 end
 
 vim.diagnostic.config {
-  virtual_text = {
-    prefix = "",
-  },
-  signs = true,
-  underline = true,
-  update_in_insert = false,
+    virtual_text = {
+        prefix = "",
+    },
+    signs = true,
+    underline = true,
+    update_in_insert = false,
 }
 
 -- session
-o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+o.sessionoptions = "blank,buffers,curdir,folds,tabpages,winsize,winpos"
 
 -- Reload all user config lua modules
 local function reload()

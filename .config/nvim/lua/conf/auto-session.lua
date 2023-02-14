@@ -14,7 +14,9 @@ local function close_buffers()
 end
 
 require('auto-session').setup {
-  log_level = 'error',
-  auto_session_suppress_dirs = { '~/', '~/projects' },
-  pre_save_cmds = { close_buffers, ':FidgetClose' }
+    log_level = 'error',
+    auto_session_suppress_dirs = { '~/', '~/projects' },
+    pre_save_cmds = { close_buffers, ':FidgetClose' },
+    auto_save_enabled = true,
+    auto_restore_enabled = true,
 }
