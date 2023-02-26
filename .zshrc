@@ -90,13 +90,14 @@ setopt nolistambiguous
 export PATH=$PATH:~/.spicetify
 
 # java
-export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
-export JAVA_HOME=$(/usr/libexec/java_home)
+if [ "$system_type" = "Darwin" ]; then
+  export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+  export JAVA_HOME=$(/usr/libexec/java_home)
+fi
 
 # python
 # alias python=/usr/bin/python3
 alias pip=/usr/bin/pip3
-
 PATH=$(pyenv root)/shims:$PATH
 
 # path
@@ -104,7 +105,8 @@ export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=~/.local/bin:$PATH
-export PATH=$PATH:/home/julian/.spicetify
+export PATH=$PATH:~/.spicetify
+export PATH=$PATH:~/bin
 
 # lazygit yadm
 alias lyadm="lazygit -ucd ~/.local/share/yadm/lazygit -w ~ -g ~/.local/share/yadm/repo.git"

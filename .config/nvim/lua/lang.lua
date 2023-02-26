@@ -1,30 +1,4 @@
 local on_attach = function(_, bufnr)
-  local nmap = function(keys, func, desc)
-    if desc then
-      desc = ' ' .. desc
-    end
-
-    vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
-  end
-
-  nmap('<leader>lr', vim.lsp.buf.rename, 'Rename')
-  nmap('<leader>la', vim.lsp.buf.code_action, 'Code Action')
-  nmap('<leader>ld', require('telescope.builtin').lsp_document_symbols, 'Document Symbols')
-  nmap('<leader>lw', require('telescope.builtin').lsp_dynamic_workspace_symbols, 'Workspace Symbols')
-  nmap('<leader>li', ':LspInstall<cr>', 'Install Lsp Server')
-  nmap('<leader>lm', ':LspInstallInfo<cr>', 'Manage Lsp Servers')
-
-  nmap('gd', vim.lsp.buf.definition, 'Goto Definition')
-  nmap('gD', vim.lsp.buf.declaration, 'Goto Declaration')
-  nmap('gdt', vim.lsp.buf.type_definition, 'Type Definition')
-
-  nmap('gi', vim.lsp.buf.implementation, 'Goto Implementation')
-  nmap('gr', require('telescope.builtin').lsp_references, 'Goto References')
-
-  -- See `:help K` for why this keymap
-  nmap('K', vim.lsp.buf.hover, 'Hover Documentation')
-  nmap('<C-s>', vim.lsp.buf.signature_help, 'Signature Documentation')
-
   -- Create a command `:Format` local to the LSP buffer
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', vim.lsp.buf.format or vim.lsp.buf.formatting,
       { desc = 'Format current buffer with LSP' })

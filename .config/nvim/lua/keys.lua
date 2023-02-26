@@ -1,14 +1,14 @@
 local wk = require("which-key")
 
 wk.register({
-    e = { ":NvimTreeToggle<cr>", "Explorer" },
-    c = { ":bd<cr>", "Close buffer" },
-    n = { ":nohl<cr>", "Clear Highlights" },
+    e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+    c = { "<cmd>bd<cr>", "Close buffer" },
+    n = { "<cmd>nohl<cr>", "Clear Highlights" },
     f = {
         name = "Find",
-        f = { ":Telescope find_files<cr>", "Find File" },
-        w = { ":Telescope live_grep<cr>", "Find Words" },
-        b = { ":Telescope buffers<cr>", "Find in Buffers" },
+        f = { "<cmd>Telescope find_files<cr>", "Find File" },
+        w = { "<cmd>Telescope live_grep<cr>", "Find Words" },
+        b = { "<cmd>Telescope buffers<cr>", "Find in Buffers" },
     },
     t = {
         name = "Trouble",
@@ -23,6 +23,16 @@ wk.register({
         name = "Git",
         g = { "<cmd>lua Lazygit_toggle()<cr>", "LazyGit" },
     },
+    l = {
+        name = "Lsp",
+        r = { "<cmd>Lspsaga rename<cr>", "Rename Symbol" },
+        a = { "<cmd>Lspsaga code_action<cr>", "Code Actions" },
+        d = { "<cmd>Lspsaga preview_definition<cr>", "Peek Definition" },
+        f = { "<cmd>Lspsaga lsp_finder<cr>", "Peek Implementation" },
+        h = { "<cmd>Lspsaga hover_doc<cr>", "Hover Doc" },
+        i = { "<cmd>LspInstall<cr>", "Install Servers" },
+        m = { "<cmd>LspInstall<cr>", "Manage Servers" }
+    }
 }, { prefix = "<leader>" })
 
 wk.register({
@@ -34,22 +44,24 @@ wk.register({
         q = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Loclist" },
     },
     g = {
-        name = "Goto",
-        h = "<cmd>Lspsaga lsp_finder<cr>",
-        a = "<cmd>Lspsaga code_action<cr>",
-        d = "<cmd>Lspsaga peek_definition<cr>",
+        d = { "<cmd>lua vim.lsp.buf.definition()<cr>", "GoTo Definition" },
+        D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "GoTo Declaration" },
+        td = { "<cmd>lua vim.lsp.buf.type_definition()<cr>", "Goto Type Definition" },
+        i = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "GoTo Implementation" }
     },
+    K = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" }
 })
 
 wk.register({
-    ['<S-l>'] = { ":BufferLineCycleNext<cr>", "Next tab" },
-    ['<S-h>'] = { ":BufferLineCyclePrev<cr>", "Prev tab" },
+    ['<S-l>'] = { "<cmd>BufferLineCycleNext<cr>", "Next tab" },
+    ['<S-h>'] = { "<cmd>BufferLineCyclePrev<cr>", "Prev tab" },
     ['<S-k>'] = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
-    ['<C-k>'] = { ":wincmd k<cr>", "Jump to north pane" },
-    ['<C-j>'] = { ":wincmd j<cr>", "Jump to south pane" },
-    ['<C-h>'] = { ":wincmd h<cr>", "Jump to west pane" },
-    ['<C-l>'] = { ":wincmd l<cr>", "Jump to east pane" },
-    ['<C-g>'] = { "<cmd>lua Lazygit_toggle()<cr>", "LazyGit" }
+    ['<C-k>'] = { "<cmd>wincmd k<cr>", "Jump to north pane" },
+    ['<C-j>'] = { "<cmd>wincmd j<cr>", "Jump to south pane" },
+    ['<C-h>'] = { "<cmd>wincmd h<cr>", "Jump to west pane" },
+    ['<C-l>'] = { "<cmd>wincmd l<cr>", "Jump to east pane" },
+    ['<C-g>'] = { "<cmd>lua Lazygit_toggle()<cr>", "LazyGit" },
+    ['<C-a>'] = { "<cmd>CodeActionMenu<cr>", "CodeActionMenu" }
 })
 
 

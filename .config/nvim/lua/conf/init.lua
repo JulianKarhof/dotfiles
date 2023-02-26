@@ -3,6 +3,7 @@ require('gitsigns').setup {}
 require('Comment').setup {}
 require('neoscroll').setup {}
 require('colorizer').setup()
+require("lspsaga").setup {}
 require("color-picker")
 
 require("flutter-tools").setup {
