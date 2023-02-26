@@ -2,8 +2,9 @@ require('bufferline').setup {}
 require('gitsigns').setup {}
 require('Comment').setup {}
 require('neoscroll').setup {}
-require('colorizer').setup()
 require("lspsaga").setup {}
+require("lsp_signature").setup {}
+require('colorizer').setup()
 require("color-picker")
 
 require("flutter-tools").setup {
