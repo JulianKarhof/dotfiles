@@ -50,16 +50,8 @@ require("telescope").setup {
       }
     }
   },
-  extensions = {
-    file_browser = {
-      hijack_netrw = true,
-      initial_mode = "normal",
-      grouped = true,
-    },
-  },
 }
 
-require("telescope").load_extension "file_browser"
 require('telescope').load_extension('projects')
 require('telescope').load_extension 'fzf'
 require('telescope').load_extension('flutter')

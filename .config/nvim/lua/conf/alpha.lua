@@ -1,6 +1,6 @@
 local alpha = require("alpha")
 local dashboard = require("alpha.themes.dashboard")
-local fortune = require("alpha.fortune")
+
 
 local header = {
   [[                                                                   ]],
@@ -56,6 +56,7 @@ dashboard.section.buttons.val = {
   dashboard.button("q", "  Quit NVIM", ":qa<CR>", {}),
 }
 
+local fortune = require("alpha.fortune") 
 dashboard.section.footer.val = table.concat(fortune(), '\n')
 
 alpha.setup({

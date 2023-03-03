@@ -47,7 +47,7 @@ require('project_nvim').setup {
 require "conf.nvim-tree"
 require "conf.null-ls"
 require "conf.toggleterm"
--- require "conf.alpha"
+require "conf.alpha"
 require "conf.cmp"
 require "conf.telescope"
 require "conf.auto-session"
