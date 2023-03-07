@@ -26,8 +26,9 @@ wk.register({
     l = {
         name = "Lsp",
         r = { "<cmd>Lspsaga rename<cr>", "Rename Symbol" },
-        a = { "<cmd>Lspsaga code_action<cr>", "Code Actions" },
-        d = { "<cmd>Lspsaga preview_definition<cr>", "Peek Definition" },
+        a = { "<cmd>CodeActionMenu<cr>", "Code Actions" },
+        o = { "<cmd>Lspsaga outline<cr>", "Code Outline" },
+        d = { "<cmd>Lspsaga peek_definition<cr>", "Peek Definition" },
         f = { "<cmd>Lspsaga lsp_finder<cr>", "Peek Implementation" },
         h = { "<cmd>Lspsaga hover_doc<cr>", "Hover Doc" },
         i = { "<cmd>LspInstall<cr>", "Install Servers" },

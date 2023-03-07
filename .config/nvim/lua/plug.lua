@@ -49,13 +49,19 @@ return require('packer').startup(function(use)
       use { 'OmniSharp/omnisharp-vim' }
       use { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' }
       use 'folke/lsp-colors.nvim'
-      use 'tami5/lspsaga.nvim'
+      use { 'glepnir/lspsaga.nvim',
+          requires = {
+              { "nvim-tree/nvim-web-devicons" },
+              { "nvim-treesitter/nvim-treesitter" }
+          }
+      }
       use 'RRethy/vim-illuminate'
       use 'mfussenegger/nvim-dap'
       use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
       use { 'evanleck/vim-svelte' }
       use { "ziontee113/color-picker.nvim" }
       use { 'ray-x/lsp_signature.nvim' }
+      use { "rafamadriz/friendly-snippets" }
 
       if packer_bootstrap then
         require('packer').sync()

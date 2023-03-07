@@ -2,22 +2,22 @@ require('bufferline').setup {}
 require('gitsigns').setup {}
 require('Comment').setup {}
 require('neoscroll').setup {}
-require("lspsaga").setup {}
-require("lsp_signature").setup {}
 require('colorizer').setup()
+require("lsp_signature").setup {}
 require("color-picker")
 
-require("flutter-tools").setup {
-    debugger = {
-        enabled = true,
+require("lspsaga").setup {
+    code_action = {
+        keys = {
+            quit = { 'q', '<esc>', '<C-c>' },
+        }
     },
-    dev_log = {
-        enabled = false,
+    rename = {
+        quit = '<esc>',
     },
-    dev_tools = {
-        autostart = true,
-        auto_open_browser = true,
-    },
+    lightbulb = {
+        virtual_text = false,
+    }
 }
 
 require('fidget').setup {

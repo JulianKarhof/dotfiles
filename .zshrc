@@ -128,3 +128,6 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 export PNPM_HOME="/Users/juliankarhof/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+
+# esp
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
