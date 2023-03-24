@@ -131,3 +131,6 @@ export PATH="$PNPM_HOME:$PATH"
 
 # esp
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

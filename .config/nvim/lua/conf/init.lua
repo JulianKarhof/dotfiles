@@ -1,47 +1,106 @@
-require('bufferline').setup {}
 require('gitsigns').setup {}
 require('Comment').setup {}
 require('neoscroll').setup {}
 require('colorizer').setup()
 require("lsp_signature").setup {}
+require("transparent").setup {}
 require("color-picker")
 
+
+require('bufferline').setup {
+  highlights = {
+    fill = {
+      bg = 'NONE',
+      fg = 'white',
+    },
+    background = {
+      bg = 'NONE',
+      fg = 'NONE',
+    },
+    close_button = {
+      bg = 'NONE',
+      fg = 'NONE',
+    },
+    separator = {
+      bg = 'NONE',
+    },
+    separator_visible = {
+      bg = 'NONE',
+    },
+    separator_selected = {
+      bg = 'NONE',
+    },
+    buffer_selected = {
+      bg = 'NONE',
+      fg = 'NONE',
+    },
+    close_button_visible = {
+      bg = 'NONE',
+      fg = 'NONE',
+    },
+    close_button_selected = {
+      bg = 'NONE',
+      fg = 'NONE',
+    },
+    buffer_visible = {
+      bg = 'NONE',
+      fg = 'NONE',
+    },
+    duplicate = {
+      bg = 'NONE',
+    },
+    duplicate_selected = {
+      bg = 'NONE',
+    },
+    duplicate_visible = {
+      bg = 'NONE',
+    },
+    modified = {
+      bg = 'NONE',
+    },
+    modified_selected = {
+      bg = 'NONE',
+    },
+  },
+}
+
+
 require("lspsaga").setup {
-    code_action = {
-        keys = {
-            quit = { 'q', '<esc>', '<C-c>' },
-        }
-    },
-    rename = {
-        quit = '<esc>',
-    },
-    lightbulb = {
-        virtual_text = false,
+  code_action = {
+    keys = {
+      quit = { 'q', '<esc>', '<C-c>' },
     }
+  },
+  rename = {
+    quit = '<esc>',
+  },
+  lightbulb = {
+    virtual_text = false,
+  }
 }
 
 require('fidget').setup {
-    text = {
-        spinner = "dots",
-    },
+  text = {
+    spinner = "dots",
+  },
 }
 
 require("trouble").setup {
-    use_diagnostic_signs = true
+  use_diagnostic_signs = true
 }
 
 require('lualine').setup {
-    options = {
-        component_separators = { left = ' ', right = '' },
-        section_separators = { left = '', right = '' },
-        always_divide_middle = true,
-        globalstatus = true,
-    },
+  options = {
+    component_separators = { left = ' ', right = '' },
+    section_separators = { left = '', right = '' },
+    always_divide_middle = true,
+    globalstatus = true,
+  },
 }
 
 require('project_nvim').setup {
-    detection_methods = { "pattern" },
-    patterns = { ".git", ">projects", "=nvim" },
+  detection_methods = { "pattern" },
+  patterns = { ".git", ">projects", "=nvim" },
 }
 
 require "conf.nvim-tree"
