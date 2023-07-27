@@ -1,2 +1,2 @@
-. "$HOME/.cargo/env"
 ANDROID_HOME=~/Android/Sdk
+CARGO_HOME=$HOME/.cargo
