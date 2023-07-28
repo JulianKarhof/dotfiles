@@ -32,7 +32,7 @@ local servers = {
   'tailwindcss',
   'arduino_language_server'
 }
---
+
 require('nvim-lsp-installer').setup {
   ensure_installed = servers,
 }
