@@ -1,4 +1,7 @@
 require('nvim-tree').setup {
+    update_focused_file = {
+        enable = true
+    },
     view = {
         float = {
             enable = true,
