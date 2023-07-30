@@ -24,6 +24,15 @@ wk.register({
     q = { "<cmd>Trouble quickfix<cr>", "Trouble Quickfix" },
     r = { "<cmd>Trouble lsp_references<cr>", "Trouble References" },
   },
+  r = {
+    name = "Run",
+    s = { "<cmd>FlutterRun<cr>", "Start" },
+    r = { "<cmd>FlutterRestart<cr>", "Restart" },
+    q = { "<cmd>FlutterQuit<cr>", "Quit" },
+    o = { "<cmd>FlutterOutlineToggle<cr>", "Outline" },
+    d = { "<cmd>FlutterDevices<cr>", "Devices" },
+    t = { "<cmd>FlutterOpenDevTools<cr>", "DevTools" },
+  },
   g = {
     name = "Git",
     g = { "<cmd>lua Lazygit_toggle()<cr>", "LazyGit" },
