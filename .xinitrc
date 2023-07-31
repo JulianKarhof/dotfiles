@@ -9,7 +9,7 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
-DEFAULT_SESSION=bspdwm
+DEFAULT_SESSION=bspwm
 
 # merge in defaults and keymaps
 
@@ -38,7 +38,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
-
 get_session(){
     local dbus_args=(--sh-syntax --exit-with-session)
     case $1 in
@@ -64,4 +63,4 @@ get_session(){
     echo "dbus-launch ${dbus_args[*]}"
 }
 
-exec $(get_session "$1")
+exec bspwm 2>~/.bspwm.err

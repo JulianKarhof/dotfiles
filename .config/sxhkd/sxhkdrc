@@ -20,6 +20,12 @@ super + ctrl + r
 super + ctrl + q
 	$HOME/.config/rofi/powermenu/type-2/powermenu.sh
 
+super + equal
+  flameshot screen
+
+super + shift + equal
+  flameshot gui
+
 #
 # bspwm hotkeys
 #
@@ -139,13 +145,20 @@ super + {Left,Down,Up,Right}
 # media keys
 #
 
+
+# brightness
+XF86MonBrightnessUp
+  brightnessctl -d gmux_backlight set 10%+
+XF86MonBrightnessDown
+  brightnessctl -d gmux_backlight set 10%-
+
 # volume
 XF86AudioLowerVolume
-  amixer set Master 5%-
+  pactl set-sink-volume @DEFAULT_SINK@ -5%
 XF86AudioRaiseVolume
-  amixer set Master 5%+
+  pactl set-sink-volume @DEFAULT_SINK@ +5%
 XF86AudioMute
-  amixer set Master toggle
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # controls
 XF86AudioPrev
