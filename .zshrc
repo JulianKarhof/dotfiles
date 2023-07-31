@@ -128,9 +128,22 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 export PNPM_HOME="/Users/juliankarhof/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+export PATH="/opt/flutter/bin:$PATH"
 
 # esp
 alias get_idf='. $HOME/esp/esp-idf/export.sh'
+
+# skoda
+alias skoda='cowsay Škoda | lolcat'
+
+# sudo edit
+alias nvims='sudoedit'
+
+# desktop session
+export DESKTOP_SESSION='bspwm'
+
+# chromium
+export CHROME_EXECUTABLE='/usr/bin/chromium'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
