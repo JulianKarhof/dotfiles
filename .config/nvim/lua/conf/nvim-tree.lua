@@ -3,15 +3,23 @@ require('nvim-tree').setup {
     enable = true
   },
   on_attach = on_attach,
+  actions = {
+    open_file = {
+      quit_on_open = true
+    },
+  },
   view = {
+    centralize_selection = true,
     float = {
       enable = true,
+      quit_on_focus_loss = true,
       open_win_config = {
-        border = "single",
-        col = 2,
+        border = "none",
         row = 2,
-      }
+        col = 2
+      },
     },
+
     adaptive_size = true,
   },
   filters = {

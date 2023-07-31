@@ -46,6 +46,10 @@ o.smartcase = true
 o.completeopt = 'menuone,preview,noinsert'
 o.hidden = true
 
+-- disable swap
+o.swapfile = false
+o.undofile = true
+
 -- cursor line
 o.cul = true
 
@@ -56,10 +60,10 @@ o.termguicolors = true
 
 -- set gutter icons
 local signs = {
-    Error = " ",
-    Warn = " ",
-    Hint = " ",
-    Info = " "
+  Error = " ",
+  Warn = " ",
+  Hint = " ",
+  Info = " "
 }
 
 for name, icon in pairs(signs) do
@@ -68,12 +72,12 @@ for name, icon in pairs(signs) do
 end
 
 vim.diagnostic.config {
-    virtual_text = {
-        prefix = "",
-    },
-    signs = true,
-    underline = true,
-    update_in_insert = false,
+  virtual_text = {
+    prefix = "",
+  },
+  signs = true,
+  underline = true,
+  update_in_insert = false,
 }
 
 -- session

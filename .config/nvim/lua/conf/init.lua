@@ -6,85 +6,6 @@ require("lsp_signature").setup {}
 require("transparent").setup {}
 require("color-picker")
 
-
-require('bufferline').setup {
-  highlights = {
-    fill = {
-      bg = 'NONE',
-      fg = 'white',
-    },
-    background = {
-      bg = 'NONE',
-      fg = 'NONE',
-    },
-    close_button = {
-      bg = 'NONE',
-      fg = 'NONE',
-    },
-    separator = {
-      bg = 'NONE',
-    },
-    separator_visible = {
-      bg = 'NONE',
-    },
-    separator_selected = {
-      bg = 'NONE',
-    },
-    buffer_selected = {
-      bg = 'NONE',
-      fg = 'NONE',
-    },
-    close_button_visible = {
-      bg = 'NONE',
-      fg = 'NONE',
-    },
-    close_button_selected = {
-      bg = 'NONE',
-      fg = 'NONE',
-    },
-    buffer_visible = {
-      bg = 'NONE',
-      fg = 'NONE',
-    },
-    duplicate = {
-      bg = 'NONE',
-    },
-    duplicate_selected = {
-      bg = 'NONE',
-    },
-    duplicate_visible = {
-      bg = 'NONE',
-    },
-    modified = {
-      bg = 'NONE',
-    },
-    modified_selected = {
-      bg = 'NONE',
-    },
-  },
-}
-
-
-require("lspsaga").setup {
-  code_action = {
-    keys = {
-      quit = { 'q', '<esc>', '<C-c>' },
-    }
-  },
-  rename = {
-    quit = '<esc>',
-  },
-  lightbulb = {
-    virtual_text = false,
-  }
-}
-
-require('fidget').setup {
-  text = {
-    spinner = "dots",
-  },
-}
-
 require("trouble").setup {
   use_diagnostic_signs = true
 }
@@ -103,6 +24,8 @@ require('project_nvim').setup {
   patterns = { ".git", ">projects", "=nvim" },
 }
 
+
+require "conf.lspsaga"
 require "conf.nvim-tree"
 require "conf.null-ls"
 require "conf.toggleterm"
@@ -110,3 +33,6 @@ require "conf.alpha"
 require "conf.cmp"
 require "conf.telescope"
 require "conf.auto-session"
+require "conf.neorg"
+require "conf.noice"
+require "conf.bufferline"
