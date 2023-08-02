@@ -3,7 +3,12 @@ require('Comment').setup {}
 require('neoscroll').setup {}
 require('colorizer').setup()
 require("lsp_signature").setup {}
-require("transparent").setup {}
+require("transparent").setup {
+  extra_groups = {
+    "NormalFloat",
+    "NvimTreeNormal"
+  },
+}
 require("color-picker")
 
 require("trouble").setup {
