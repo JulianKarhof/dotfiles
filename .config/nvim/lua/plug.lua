@@ -27,7 +27,7 @@ require("lazy").setup({
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate"
+    build = ":TSUpdate"
   },
   { "williamboman/nvim-lsp-installer" },
   { "neovim/nvim-lspconfig" },
@@ -93,8 +93,7 @@ require("lazy").setup({
   { "ahmedkhalf/project.nvim" },
   {
     "iamcco/markdown-preview.nvim",
-    run = "cd app && yarn install",
-    lazy = true
+    build = "cd app && yarn install",
   },
   { "OmniSharp/omnisharp-vim" },
   {
@@ -131,6 +130,5 @@ require("lazy").setup({
     "nvim-neorg/neorg",
     build = ":Neorg sync-parsers",
     dependencies = { "nvim-lua/plenary.nvim" },
-    lazy = true
   },
 })

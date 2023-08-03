@@ -10,6 +10,7 @@ require("transparent").setup {
   },
 }
 require("color-picker")
+require("nvim-treesitter.install").compilers = { "gcc-12" }
 
 require("trouble").setup {
   use_diagnostic_signs = true
