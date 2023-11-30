@@ -97,7 +97,7 @@ fi
 
 # python
 # alias python=/usr/bin/python3
-alias pip=/usr/bin/pip3
+# alias pip=/usr/bin/pip3
 PATH=$(pyenv root)/shims:$PATH
 
 # path
