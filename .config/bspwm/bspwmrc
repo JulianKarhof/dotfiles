@@ -3,6 +3,10 @@
 # launch hotkey daemon
 pgrep -x sxhkd > /dev/null || sxhkd &
 
+# initialize keyring
+dbus-update-activation-environment --all
+gnome-keyring-daemon --start --components=secrets
+
 # set wallpaper
 ~/.fehbg &
 # start compositor (new backend improves performance)
@@ -34,8 +38,8 @@ fcitx5 &
 setxkbmap eu
 
 # rename monitors
-bspc monitor DP-4 -n left
-bspc monitor DP-2 -n center
+bspc monitor DP-2 -n left
+bspc monitor DP-4 -n center
 bspc monitor DP-0 -n right
 
 # assign desktops to monitors
