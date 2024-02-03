@@ -4,7 +4,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # ininialization code with confirmation prompts above this line
-
 # oh-my-zsh installation
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -117,14 +116,27 @@ alias pn=pnpm
 # neovide
 export NEOVIDE_MULTIGRID=true
 
+# esp
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
+
+# misc
+alias todo=taskell
+alias camera='guvcview -z'
+
 # android
 export ANDROID_SDK_ROOT=/home/julian/Android/Sdk
 export ANDROID_HOME=/home/julian/Android/Sdk
 alias emu="emulator @Pixel_6_Pro_API_33"
 
+# gtk theme
+export GTK_THEME=Orchis:dark
+
 #flutter
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pico sdk
+export PICO_SDK_PATH="/usr/share/pico-sdk"
 
 export PNPM_HOME="/Users/juliankarhof/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
