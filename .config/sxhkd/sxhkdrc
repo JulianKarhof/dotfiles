@@ -13,6 +13,9 @@ super + @space
 super + b
   firefox
 
+super + shift + s
+  gnome-screenshot -ia
+
 # make sxhkd reload its configuration files:
 super + ctrl + r
 	pkill -USR1 -x sxhkd
@@ -70,6 +73,7 @@ super + ctrl + {m,x,y,z}
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
+
 # focus the node for the given path jump
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
@@ -79,7 +83,10 @@ super + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
-super + bracket{left,right}
+super  bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+super + alt {h,l}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
@@ -104,6 +111,9 @@ super + {_,shift + }{KP_End, KP_Down, KP_Next, KP_Left, KP_Begin, KP_Right, KP_H
 super + alt + p
   {bspc node -i,\
   for i in $(bspc query -N -n '.leaf.!window'); do bspc node $i -k; done}
+
+super + r
+  ls ~/scripts/*.sh | rofi -dmenu -drun -p "Run" | sh
 
 #
 # preselect

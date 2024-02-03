@@ -1,0 +1,13 @@
+#!/bin/bash
+
+case $class in
+ '')
+     pid=$(xprop -id $1 _NET_WM_PID | awk '{print $NF}')
+     [ -n "$pid" ] && cmd="$(ps -q "$pid" -o comm=)"
+     [ "$cmd" = qemu-system-x86 ] && echo "state=floating"
+     ;;
+esac
+
+
+       # sleep 1
+       # xdotool windowmove $1 6769 121
